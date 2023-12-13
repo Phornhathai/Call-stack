@@ -14,13 +14,30 @@ const fakeRequestPromise = (url) => {
 
 // fakeRequestPromise("books.com");
 
-const res = fakeRequestPromise("books.com");
-//จะรอให้ promise ทำงานเสร็จก่อนว่าได้ state อะไรกลับมากับ object
-//call back กับ mehtod then จะทำงานก็ต่อเมื่อ state ของ promise กลับมาเป็น fulfill / resolve
-res
+// const res = fakeRequestPromise("books.com");
+// //จะรอให้ promise ทำงานเสร็จก่อนว่าได้ state อะไรกลับมากับ object
+// //call back กับ mehtod then จะทำงานก็ต่อเมื่อ state ของ promise กลับมาเป็น fulfill / resolve
+// res
+//   .then(() => {
+//     console.log("Success!!!");
+//   }) //ถ้าเข้ามาใน .catch มันคือ failed / reject
+//   .catch(() => {
+//     console.log("Failed!!!");
+//   });
+
+// ทำงานเหมือนกับ code ด้านบนเลย
+fakeRequestPromise("books.com/page1")
   .then(() => {
-    console.log("Success!!!");
-  }) //ถ้าเข้ามาใน .catch มันคือ failed / reject
+    console.log(`SUCCESS !!! (page1)`);
+    return fakeRequestPromise("books.com/page2");
+  })
+  .then(() => {
+    console.log(`SUCCESS !!! (page2)`);
+    return fakeRequestPromise("books.com/page3");
+  })
+  .then(() => {
+    console.log(`SUCCESS !!! (page3)`);
+  })
   .catch(() => {
-    console.log("Failed!!!");
+    console.log(`FAILED !!!`);
   });
