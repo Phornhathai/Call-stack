@@ -1,0 +1,44 @@
+body{
+    background-color: gray;
+}
+div{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    margin: 20px;
+    object-fit: cover;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: yellow;
+}
+
+input:focus{
+    border: 3px pink  ;
+}
+
+.anime-details{
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    margin: 10px;
+    background-color: red;
+}
+
+img{
+    width: 50%;
+    height: max-content;
+}
+
+button{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px black solid;
+}

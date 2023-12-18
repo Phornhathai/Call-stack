@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Public API search App
-    </title>
-</head>
-<body>
-    <form id=""></form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public API search App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form id="searchForm">
+      <input
+        type="text"
+        name="query"
+        id="nameOfCharacter"
+        placeholder="Put category for gift or images"
+        maxlength="50"
+      />
+      <button>Search</button>
+
+      <div id="animeDetails" class="anime-details"></div>
+    </form>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+    ></script>
+    <!-- ในส่วน head หรือส่วนท้ายของ body -->
     <script src="challengePublicAPISearchApp.js"></script>
-</body>
+  </body>
 </html>
