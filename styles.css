@@ -1,44 +1,56 @@
-body{
-    background-color: gray;
-}
-div{
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: center;
-    margin: 20px;
-    object-fit: cover;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    background-color: yellow;
+a {
+  text-align: center;
+  text-decoration: none;
+  color: brown;
+  font-weight: bold;
+  margin: 30px 0;
 }
 
-input:focus{
-    border: 3px pink  ;
+a :visited {
+  color: inherit;
 }
 
-.anime-details{
-    display: grid;
-    grid-template-columns: repeat(5 , 1fr);
-    margin: 10px;
-    background-color: red;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-img{
-    width: 50%;
-    height: max-content;
+.input-group {
+  width: 30vw;
 }
 
-button{
-    margin: 10px;
-    border-radius: 10px;
-    background-color: transparent;
-    border: 1px black solid;
+.anime-details {
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  width: 80vw;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 20px 0;
+  border-radius: 24px;
+}
+
+.detailAnimes {
+  margin: 20px;
+  width: 250px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+button {
+  margin: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px black solid;
 }

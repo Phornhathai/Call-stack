@@ -53,7 +53,7 @@ const showDetail = (data) => {
     artistName.textContent = item.artist_name;
     // fetch data the anime_name
 
-    const animeName = document.createElement("h3");
+    const animeName = document.createElement("p");
     animeName.textContent = item.anime_name;
 
     // Image
